@@ -1,0 +1,4 @@
+C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.AssemblyInfoInputs.cache
+C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.AssemblyInfo.cs
+C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.csproj.CoreCompileInputs.cache
