@@ -3,10 +3,35 @@
 public static class Output
 {
     private static readonly int intercharacter_write_delay_ms;
+    private static readonly string error_prompt;
+    private static readonly string output_prompt;
 
     static Output()
     {
         intercharacter_write_delay_ms = 80;
+        error_prompt = "error> ";
+        output_prompt = "output> ";
+    }
+
+    public static void Write(string message, bool prompt = true)
+    {
+        if (prompt) 
+        { 
+            Console.Write(output_prompt);
+        }
+        Console.Write(message);
+    }
+
+    public static void WriteLine(string message, bool prompt = true)
+    {
+        Write(message, prompt);
+        Console.Write(Environment.NewLine);
+    }
+
+    public static void WriteError(string message)
+    {
+        Console.Write(error_prompt);
+        Console.WriteLine(message);
     }
 
     public static void TypeCharacter(char character)

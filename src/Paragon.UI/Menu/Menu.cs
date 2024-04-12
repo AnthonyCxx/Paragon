@@ -1,42 +1,29 @@
-using Paragon.Domain.Interfaces;
-using Paragon.Domain;
 using Paragon.UI.IO;
+using Paragon.UI.Contracts;
 
 namespace Paragon.UI.Menu;
 
 public class Menu : IMenu
 {
-    public string Path { get; init; }
-    public List<string>? Choices { get; init; }
+    public string Prompt { get; init;}
+    public List<MenuChoice> Choices { get; init; }
 
-    public Menu(string filename)
+    public Menu(string prompt, List<MenuChoice> choices)
     {
-        Path = System.IO.Path.Combine(Constants.ResourcesFolderPath, filename);
-        Choices = null;
-
-        if (!File.Exists(Path))
-        {
-            throw new FileNotFoundException(Path);
-        }
+        Prompt = prompt;
+        Choices = choices;
     }
 
     public void Display()
     {
-        Output.TypeFile(Path);
-    }
-
-    public int GetChoice()
-    {
-        if (Choices is null)
-        {
-            throw new InvalidOperationException("cannot get choice from menu without choices");
-        }
+        Output.WriteLine(Prompt);
 
         for (int i = 0; i < Choices.Count; ++i)
         {
-            Output.TypeLine($"{i + 1}. {Choices[i]}");
+            Output.WriteLine($"{i + 1}. {Choices[i].Text}");
         }
 
-        return Input.ReadNumber(0, Choices.Count);
+        int choice = Input.ReadInteger(1, Choices.Count);
+        Choices[choice - 1].Choose();
     }
 }

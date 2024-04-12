@@ -1,25 +1,45 @@
-using System.Numerics;
+using System.Runtime.Serialization;
 
 namespace Paragon.UI.IO;
 
 public static class Input
 {
-    public static T ReadNumber<T>(T minimum, T maximum) where T: INumber<T>
+    private static readonly string input_prompt;
+
+    static Input()
+    {
+        input_prompt = "input> ";
+    }
+
+
+    public static int ReadInteger(int minimum, int maximum)
     {
         string? user_input;
-        T value = T.Zero;
+        int value;
 
         do
         {
+            Output.Write(input_prompt, prompt: false);
             user_input = Console.ReadLine();
-        
-            if (!T.TryParse(user_input, System.Globalization.NumberStyles.Number, null, out value))
+
+            if (user_input is null)
             {
-                Output.TypeError($"number not in range [{minimum},{maximum}]");
+                Output.WriteError("no input");
             }
 
-        } while (user_input is not null && value >= minimum && value <= maximum);
-    
-        return value;
+            if (!Int32.TryParse(user_input, out value))
+            {
+                Output.WriteError("input not an integer");
+            }
+            else if (value < minimum || value > maximum)
+            {
+                Output.WriteError($"number \'{value}\' not in the range [{minimum},{maximum}]");
+            }
+            else
+            {
+                return value;
+            }
+
+        } while (true);
     }
 }

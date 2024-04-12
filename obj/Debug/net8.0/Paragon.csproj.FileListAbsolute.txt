@@ -2,3 +2,14 @@ C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.GeneratedMSBuildEditorConfig
 C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.AssemblyInfoInputs.cache
 C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.AssemblyInfo.cs
 C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.csproj.CoreCompileInputs.cache
+C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.sourcelink.json
+C:\Users\ethan\dev\Paragon\bin\Debug\net8.0\Paragon.exe
+C:\Users\ethan\dev\Paragon\bin\Debug\net8.0\Paragon.deps.json
+C:\Users\ethan\dev\Paragon\bin\Debug\net8.0\Paragon.runtimeconfig.json
+C:\Users\ethan\dev\Paragon\bin\Debug\net8.0\Paragon.dll
+C:\Users\ethan\dev\Paragon\bin\Debug\net8.0\Paragon.pdb
+C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.dll
+C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\refint\Paragon.dll
+C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.pdb
+C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\Paragon.genruntimeconfig.cache
+C:\Users\ethan\dev\Paragon\obj\Debug\net8.0\ref\Paragon.dll

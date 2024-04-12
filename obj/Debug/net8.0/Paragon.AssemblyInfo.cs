@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Paragon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24823db4d67076fab1253d7835a3a57a8eeb1b40")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f07e824d01cfa69e1f2399e1af0f217f546abca8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Paragon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Paragon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
